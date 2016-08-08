@@ -10,6 +10,21 @@ module.exports = {
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
+		"at-rule-no-unknown": [ true, {
+			"ignoreAtRules": [
+				"extend",
+				"function",
+				"import",
+				"mixin",
+				"for",
+				"each",
+				"return",
+				"if",
+				"else",
+				"include",
+				"content"
+			]
+		} ],
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always-multi-line",
@@ -59,7 +74,7 @@ module.exports = {
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-whitespace-after": "always",
-    "indentation": 2,
+    "indentation": ["tab"],
     "keyframe-declaration-no-important": true,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
@@ -97,10 +112,12 @@ module.exports = {
     "selector-list-comma-space-before": "never",
     "selector-max-empty-lines": 0,
     "selector-pseudo-class-case": "lower",
-    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-class-no-unknown":  [ true, {
+			"ignorePseudoClasses": ["global"]
+		}],
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-element-case": "lower",
-    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-element-colon-notation": "single",
     "selector-pseudo-element-no-unknown": true,
     "selector-type-case": "lower",
     "selector-type-no-unknown": true,
